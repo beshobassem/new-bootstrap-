@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <!-- خاصه لازم تتكتب عشان السيرفار يشتغل ع الموبايل-->
+            <title>BOOTSTRAP</title>
+            <link rel='stylesheet' href='css/bootstrap.css' />
+            <link rel='stylesheet' href='css/bootstrap.min.css' /> <!-- دى واللى تحتاها اخدت السورس بتاعهم من الملف اللى نزلته من الموقع نفسه-->
+            <link rel='stylesheet' href='css/change.css' />
+            <script src="jquery-3.3.1.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel='stylesheet' href='style.css'  />
+            <link rel='stylesheet' href='media.css'  />
+            <link rel='stylesheet' href='color.css'  />
+            <link rel="icon" href="bootstrap-stack.png" type="image/png">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">   <!--ده لينك تفعيل ال ايكونات  -->
+            
+        </head>
+        <body>
+            
+            <section class="option">
+                <div class="color">
+                    <h4>color option</h4>
+                    <ul class="list-unstyled">
+                        <li data-value="color.css"></li>
+                        <li data-value="second_color.css"></li>
+                        <li data-value="third_color.css"></li>
+                        <li data-value="4_color.css"></li>
+                        <li data-value="5-color.css"></li>
+                    </ul>
+                </div>
+                <i class="fas fa-cog fa-3x satuing"></i>
+            </section>
+            
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #38ACEC;" >  <!--ده البرواز الخارجى اللى لونه رومادى وممكن نتحكم ف اللون بالكلاس ال bg-light-->  <!--fixed-top ده عشان يبقى من نفوق ديما مينزلشي معايا لما انا انزل بالفاره --> <!--bg-light ده اللون ولو مش عايزه امسحه واكتب style="background:red;" -->
+                <a class="navbar-brand" href="#"> <!-- ده العنوان بتاع الصفحه اللى على الشمال خالص -->
+                    <img src="bootstrap-stack.png" width="30" height="30" class="d-inline-block align-top" alt="" title="bootstrap"> <!--دى الصوره اللى جنب العنوان --> <!-- وبيتكتب قبل العنوان نفسه-->
+                    Navbar <!--ده العنوان بتاع الصفحه -->
+                </a>  <!-- حاى بالك انه كله جوه حرف ال a  معنى كده انه هيكون لينك لحاجه معينه وغالبا بيكون الصفحه الرئيسيه-->
+                
+                
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">  <!--active دى بيخلى الكلمه زاهيه وواضحه عن الباقى  -->
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>  <!-- هنا هو عاماها disabled يعنى مش هينفع اتحكم فيها ولا ادوس عليها-->
+                      </li>
+                      <li class="nav-item dropdown">  <!-- هنا عاملها dropdown بمعنى ان دى ليها قايمه فلازم يكتب الكلمه دى عشان القايمه تظهر تحتها مش من اول السطر-->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown link
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">  <!-- ده بيعمل الرزار الاخير ليه منيو بحيث يكون ليه اختيارات تانى -->
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <form class="form-inline" >
+                    <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search " >  <!-- دى الفورم بتاعت السيرش-->
+                    <button class="btn  btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                  
+                  
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">  <!-- دى لما الشاشه تصغر بتحظ كل البيانات والاختيارات جوه ال 3 شرط اللى هيظهروو لما الشاشه هتصغر--> <!--data-target="#navbarNavAltMarkup" دى هتلاقيها مستدعيه ف الديف الكبير باسم ال id عشان لما تصغير وتدوس عليه يلاقيى الحاجات اللى ف الديف -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  
+            </nav>
+            
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">   <!--id="carouselExampleControls" ده ال id اللى بينده على الصوره لما تقلب من السهم ولازم يبقى زى ال href -->
+              <ol class="carousel-indicators">
+                <li href="#carouselExampleControls" data-slide-to="0" class="active"></li>
+                <li href="#carouselExampleControls" data-slide-to="1"></li>
+                <li href="#carouselExampleControls" data-slide-to="2"></li>
+              </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="fondo-luz-puntual_1284-4685.jpg" class="d-block w-100" alt="..." width=50%  height="600">
+                    <div class="carousel-caption">  <!-- دى بيكتب جمله من تحت الصوره-->
+                        <h1>this first </h1>
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <div class="btn btn-primary">Read More</div>
+                    <div class="btn btn-danger">Buy</div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="fondo-de-navidad-vector-vacaciones-de-invierno-azul-de-fondo-publicidad-buena-mesa-para-mostrar-su-montaje-venta-de-productos-de-navidad-ilustracion-kcjh4k.jpg" class="d-block w-100" alt="..." width="1000"  height="600">
+                    <div class="carousel-caption">
+                       <h1>this second </h1>
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <div class="btn btn-primary">Read More</div>
+                    <div class="btn btn-danger">Buy</div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="fondo-tecnologico-digital_1017-7135.jpg" class="d-block w-100" alt="..." width="1000"  height="600">
+                    <div class="carousel-caption">
+                        <h1>this third </h1>
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <div class="btn btn-primary">Read More</div>
+                    <div class="btn btn-danger">Buy</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" title="Back">   <!--href="#carouselExampleControls" هو ده اللى بيون نفس اسم ال id عشان ينادى عليه -->
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" title="Next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <section class="about text-center">   <!--text-center دى زي text-algin:center بس بتتكتب كده عشان احنا شغالين بوت استراب فعادى يعنى -->
+                <h1>new template in course <span>zeroo</span> </h1>
+                <p class="lead">hello,creat with all the love with a <strong>bootstrap</strong> 4.3.3</p>   <!-- lead ده بينظم شكل الخد تقريباا لبس كده -->
+            </section>
+            
+            <section class="features">
+                <div class="container">
+                <h1>features</h1>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="fead">
+                        <span><img src="https://img.icons8.com/office/32/000000/secured-letter.png"></span>
+                        <h3>100% responsive</h3>
+                        <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle.</p>
+                        </div> 
+                    </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="fead">
+                        <span><img src="https://img.icons8.com/office/32/000000/secured-letter.png"></span>
+                        <i class="fas fa-angle-right"></i>
+                        <i class="fas fa-arrow-alt-circle-down"></i>
+                        <i class="fas fa-bomb"></i>
+                        <i class="far fa-angry"></i>
+                        <h3>100% responsive</h3>
+                        <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle.</p>
+                        </div> 
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="fead">
+                        <span><img src="https://img.icons8.com/office/32/000000/secured-letter.png"></span>
+                        <h3>100% responsive</h3>
+                        <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle.</p>
+                        </div> 
+                    </div>
+                       <div class="col-lg-3 col-md-6">
+                        <div class="fead">
+                        <span><img src="https://img.icons8.com/office/32/000000/secured-letter.png"></span>
+                        <h3>100% responsive</h3>
+                        <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle.</p>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+            <section class="testimonials">
+                <div class="container">
+                    <h1>tell us, what's your opinian...?</h1>
+                 <div id="b" class="carousel slide" data-ride="carousel">   <!--id="carouselExampleControls" ده ال id اللى بينده على الصوره لما تقلب من السهم ولازم يبقى زى ال href -->
+                <ol class="carousel-indicators">
+                    <li href="#b" data-slide-to="0" class="active">
+                      <img src="500_F_113927934_sCoaIlA5zeK7yEskjh1tG7GAqseplkAT.jpg" alt="customer" title="besho" />
+                    </li>
+                    <li href="#b" data-slide-to="1">
+                      <img src="cartoon-businessman-in-suit-portrait-in-circle-vector-17571127.jpg" alt="customer" title="bassem"/>
+                    </li>
+                    <li href="#b" data-slide-to="2">
+                      <img src="stock-illustration-portrait-happy-fat-businessman-portrait-happy-fat-businessman-126989750.jpg" alt="customer" title="sodky"/>
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <p class="text-center">besho</p>
+                        <br>
+                        <br>   <!--عشان يفرق بين الكلام وشريط التقليب ميبقااش لازقين ف بعض  -->
+                        <hr>
+                    
+                  </div>
+                  <div class="carousel-item">
+                    
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <p class="text-center">bassem</p>
+                        <br>
+                        <br>   <!--عشان يفرق بين الكلام وشريط التقليب ميبقااش لازقين ف بعض  -->
+                        
+                        <hr>
+                    </div>
+                  
+                  <div class="carousel-item">
+                    
+                        <p class="lead">Use data attributes to easily control the position of the carousel. data-slide accepts the keywords prev or next, which alters the slide position relative to its current position. Alternatively, use data-slide-to to pass a raw slide index to the carousel data-slide-to="2", which shifts the slide position to a particular index beginning with 0</p>
+                        <p class="text-center">sodky</p>
+                        <br>
+                      <br>   <!--عشان يفرق بين الكلام وشريط التقليب ميبقااش لازقين ف بعض  -->
+                      <hr>
+                  </div>
+                  </div>
+                </div>
+                
+            </div>
+                </div>
+                 
+            </section>
+            <section class="price">
+                <div class="container">
+                    <h1>amazing price table...</h1>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="price-box">
+                                <h3 class="text-primary">WEB</h3>
+                                <p>40$</p>
+                                <ul class="list-unstyled">
+                                    <li>web designer</li>
+                                    <li>web developer</li>
+                                    <li>web hosting </li>
+                                </ul>
+                                <a href="#" class="btn btn-primary">order now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="price-box">
+                                <h3 class="text-success">technoligy</h3>
+                                <p  class="center-text">30$</p>
+                                <ul class="list-unstyled">
+                                    <li>network</li>
+                                    <li>tester</li>
+                                    <li>server</li>
+                                </ul>
+                                <a href="#" class="btn btn-success">order now</a>
+                            </div>
+                        </div>
+                    <div class="col-md-3 col-sm-6">
+                            <div class="price-box">
+                                <h3 class="text-info">system</h3>
+                                <p>50$</p>
+                                <ul class="list-unstyled">
+                                    <li>security</li>
+                                    <li>game developer</li>
+                                    <li>diskTop application</li>
+                                </ul>
+                                <a href="#" class="btn btn-info">order now</a>
+                            </div>
+                        </div>
+                    <div class="col-md-3 col-sm-6">
+                            <div class="price-box">
+                                <h3 class="text-danger">mopile app</h3>
+                                <p>60$</p>
+                                <ul class="list-unstyled">
+                                    <li>ios</li>
+                                    <li>software</li>
+                                    <li>andiroid</li>
+                                </ul>
+                                <a href="#" class="btn btn-danger">order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <section class="our_team text-center">
+                <div class="team">
+                    <div class="container">
+                     <h2>this a our_team...</h2>
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="person">
+                                
+                                <img src="FD4KR8Js_400x400.jpg" alt="mo.salah" width="200" height="350" title="mo.salah" class="rounded-circle"/>  <!-- class="rounded-circle" ده بيحولها لدايره -->
+                                <h3>Mo.Salah</h3>
+                                <p>he is a faumes egyptian and he ia a player football and he is a smart.</p>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-google"></i>
+                                <i class="fab fa-instagram"></i>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="person">
+                                <img src="872.jpg" alt="Ramy Kamel" width="200" height="350" title="Ramty Kamel"  class="rounded-circle"/>
+                                <h3>Ramy Kamel</h3>
+                                <p>he is a faumes egyptian and he is a cast amirican .. he is a live in amrican and he is a smaart and success.</p>
+                                <i class="fab fa-skype fa-lg"></i>   <!--fa-lg ده بيكبر الايكوون -->
+                                <i class="fab fa-twitter-square"></i>  <!--  -square لنا تضيف الكلمه دى بيحطها جوه مربع-->
+                                <i class="fab fa-soundcloud fa-2x"></i>  <!-- fa-2x دم المقاس برضه بس اكبر وممكن تتحكم فيه -->
+                                <i class="fas fa-circle-notch fa-spin"></i>   <!-- spin دى بتخليها تلف -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="person">
+                                <img src="cVPQkoDI_400x400.jpg" alt="Amer Eed" width="200" height="350" title="Amer Eed"  class="rounded-circle"/>
+                                <h3>Amer Eed</h3>
+                                <p>he is a songer man and faumas and smart.</p>
+                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-facebook-messenger"></i>
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="person">
+                                <img src="Emma_Watson_Cannes_2013_2.jpg" alt="Ema Waston" width="200" height="350" title="Ema Waston" class="rounded-circle" />
+                                <h3>Ema Waston</h3>
+                                <p>she is casting faumes and fauvoriat person in films harry potter.</p>
+                                <i class="fab fa-google-plus"></i>
+                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="subscribe text-center">
+                <div class="container">
+                        <h1>this a subcribe</h1>
+                        <p class="lead">this a normal subscribe and this a test for us to learn more about this </p>
+                        <form class="form-inline">
+                            <input class="form-control" type="text" placeholder="Write your Text">
+                            <button class="btn btn-danger"><i class="fa fa-edit"> </i> subscirbe</button>
+                        </form>
+                </div>
+            </section>
+            
+            <section class="stats text-center">
+                <div class="data">
+                    <div class="container">
+                        <h2>this is a statistics</h2>
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="stats_2">
+                                    <i class="fa fa-users fa-5x"></i>
+                                    <p>9,550</p>
+                                    <span>this number of users</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="stats_2">
+                                    <i class="fas fa-comments fa-5x"></i>
+                                    <p>25,600</p>
+                                    <span>this a number of comment</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="stats_2">
+                                    <i class="fas fa-suitcase fa-5x"></i>
+                                    <p>1,240</p>
+                                    <span>this a number of project</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="stats_2">
+                                    <i class="fas fa-dharmachakra fa-5x"></i>
+                                    <p>101,250</p>
+                                    <span>this a number of markting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="skills">
+                <div class="container">
+                    <h2 class="text-center">our skills</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="skills-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">   <!-- السطر ده بيعمل النسبه المئويه لحاجه معينه وهنا بيثله ان قيمته 80 واقل حاجه فيه 0 واكبر حاجه فيه 100-->  <!--bg-success دى بتتحكم ف لون الشريط وهنا لون اخضر وبنستخدم نفس الوان الزراير  -->    <!--progress-bar-striped ده بيعمل خطوووطل مايله بتدى شكل احسن -->   <!--progress-bar-animated ده بيخلى الخطوط المايله تتحرك وتدى شكل احسن  -->
+                                    html & css
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">   <!-- السطر ده بيعمل النسبه المئويه لحاجه معينه وهنا بيثله ان قيمته 80 واقل حاجه فيه 0 واكبر حاجه فيه 100-->  <!--bg-success دى بتتحكم ف لون الشريط وهنا لون اخضر وبنستخدم نفس الوان الزراير  -->    <!--progress-bar-striped ده بيعمل خطوووطل مايله بتدى شكل احسن -->   <!--progress-bar-animated ده بيخلى الخطوط المايله تتحرك وتدى شكل احسن  -->
+                                    php & mysql
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">   <!-- السطر ده بيعمل النسبه المئويه لحاجه معينه وهنا بيثله ان قيمته 80 واقل حاجه فيه 0 واكبر حاجه فيه 100-->  <!--bg-success دى بتتحكم ف لون الشريط وهنا لون اخضر وبنستخدم نفس الوان الزراير  -->    <!--progress-bar-striped ده بيعمل خطوووطل مايله بتدى شكل احسن -->   <!--progress-bar-animated ده بيخلى الخطوط المايله تتحرك وتدى شكل احسن  -->
+                                    javascript & jquery
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">   <!-- السطر ده بيعمل النسبه المئويه لحاجه معينه وهنا بيثله ان قيمته 80 واقل حاجه فيه 0 واكبر حاجه فيه 100-->  <!--bg-success دى بتتحكم ف لون الشريط وهنا لون اخضر وبنستخدم نفس الوان الزراير  -->    <!--progress-bar-striped ده بيعمل خطوووطل مايله بتدى شكل احسن -->   <!--progress-bar-animated ده بيخلى الخطوط المايله تتحرك وتدى شكل احسن  -->
+                                    .net & laravil
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="skill-info">
+                                <h3>about the team</h3>
+                                <p class="lead"> we are designing and programming team and developer for all computer scince, we wish to come to us...</p>
+                                <button type="button" class="btn btn-primary">call us</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <section class="contact-us">
+                <div class="fields text-center">
+                    <div class="container">
+                        
+                            
+                                <i class="fas fa-headphones fa-2x"></i> 
+                                <h1>hell us what's your fell</h1>
+                                <p class="lead" >we so happy for you .. you can coming to us anytime</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <form role="form">  <!--  role="form" مش عارف ايه لازمتها-->
+                                
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" placeholder="user name">   <!-- form-control دى كلاس ف البواستراب بينظم الانبوت-->
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="phone">
+                                    </div>
+                                   
+                                </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="writr your massege"></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-danger btn-block">contact us</button>  <!--btn-block دى بتخلى الزرار يملى العرض كله -->
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </section>
+            <section class="clients">
+                <div class="container">
+                    <div class="row">
+                        <ul class="list-unstyled">
+                            <li class="col-md-2 col-sm-4">
+                                <img class="img-responsive center-block" src="BBC.png" />
+                            </li>
+                            <li class="col-md-2 col-sm-4">
+                                <img class="img-responsive center-block" src="CNN_logo_400x400.png" />
+                            </li>
+                            <li class="col-md-2 col-sm-4">
+                                <img class="img-responsive center-block" src="forbes_1200x1200.jpg" />
+                            </li>
+                            
+                            <li class="col-md-2 col-sm-4">
+                                <img class="img-responsive center-block" src="WSJ_facebook.png" />
+                            </li>
+                            <li class="col-md-2 col-sm-4">
+                                <img class="img-responsive center-block" src="38yALoNjFp5trr9aXcfssk-320-80.png" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <h3>website</h3>
+                            <ul class="list-unstyled colum">
+                                <li>home</li>
+                                <li>about</li>
+                                <li>campany</li>
+                                <li>code</li>
+                                <li>design</li>
+                                <li>host</li>
+                                <li>solutions</li>
+                                <li>site</li>
+                                <li>contact</li>
+                            </ul>
+                            <ul class="list-unstyled icon">
+                                <li><img src="83-facebook-128.png" alt="facebook" width="48" height="" title="facebook"></li>
+                                <li><img src="24-twitter_tweet-128.png" alt="twitter" width="48" height="48" title="twitter"></li>
+                                <li><img src="67-hangouts-128.png" alt="hangutes" width="48" height="48" title="hangutes"></li>
+                                <li><img src="62-instagram-128.png" alt="instgram" width="48" height="48" title="instgram"></li>
+                                <li><img src="13-whatsapp-128.png" alt="whats app" width="48" height="48" title="whats app"></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-4  col-md-6">
+                            <h3>latest articles</h3>
+                            <div class="media">
+                                <a class="left" href="#">
+                                    <img class="media" src="112-gmail_email_mail-128.png" alt="gmail" width="64" height="64"/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        programming
+                                    </h4>
+                                    <p>you can be aprogramming that by learn to c++, java, python, c#, html, css, bootstrap</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="left" href="#">
+                                    <img class="media" src="56-linkedin-128.png" alt="gmail" width="64" height="64"/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        hacker
+                                    </h4>
+                                    <p>you can be aprogramming that by learn to c++, java, python, c#, html, css, bootstrap</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="left" href="#">
+                                    <img class="media" src="32-teamviewer-128.png" alt="gmail" width="64" height="64"/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        software
+                                    </h4>
+                                    <p>you can be aprogramming that by learn to c++, java, python, c#, html, css, bootstrap</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>other work</h3>
+                            <img class="last-img" src="397311-1506533811-477128-1mesr01473352942.jpg"  width="150" height="100" />  <!-- class="img-thumbnail" بيعمل برواز للصوره -->
+                            <img class="last-img" src="Blog-Posts-2018_Photoshop-Ways-1024x512.png"  width="150" height="100" />
+                            <img class="last-img" src="nnn.jpg"  width="150" height="100" />
+                            <img class="last-img" src="shopping_sale_banner_vector_ribbon_49016.jpg"  width="150" height="100" />
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright &copy; 2014 <span>your template name is </span> Navbar
+                    <p>come to us <a href="#">hare</a></p>
+                </div>
+            </section>
+            
+             
+          <!-- <section class="loading-overlay">  ده كود التحميل بتاع الصفحه
+                <h2>the website is loading now ...</h2>
+            <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+             </section>  -->
+          
+           
+           
+            
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <!-- دى واللى تحتها جبتها من الموقع نفسه كوبي-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="jquart.js"></script>
+        </body>
+    </html>

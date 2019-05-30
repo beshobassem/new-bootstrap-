@@ -1,0 +1,40 @@
+.navbar .collapse .dropdown a {
+    
+}
+/*small phone*/
+@media (max-width: 767px)   /*اشمعنا الرقم ده ؟؟ عشان ده اكبر مقاس لانواع الموبيلاات */
+{    /*هما كل حاجه هتتنفز بس على حسب الشرط اللى فووق بسسسس*/
+ h1{
+  
+  
+ }
+}
+/*small screen*/
+@media (min-width:768px) and (max-width:991px) /*ده مقاس اللى بعد الموبيل على طول لحد */
+{   /*ده معناه من اول المقاس ده وانت طالع اعمل كده*/
+ h1{    
+  
+ 
+ }
+}
+/*media screen*/
+@media (min-width:992px)and (max-width:1199px)
+{
+ h1 {
+  
+  
+ }
+}
+/*large screen*/
+ @media (min-width:1200px)  /*ده معناه من اول المقاس ده لحد فووق نفز*/
+ {
+  h1{
+  
+  }
+ }
+ @media (max-width:767px)
+ {
+     .subscribe .container .form-inline .form-control{
+        
+     }
+ }
